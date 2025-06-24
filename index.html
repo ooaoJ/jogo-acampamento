@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="assets/Images/fullscreen-mark.png" alt="Fullscreen button" id="screen-control">
+    <div id="open-modal">
+        <div class="modal" id="modal">
+            <img src="assets/Images/wood-modal-bg.png" alt="fundo">
+            <div class="content">
+                <h1>Seja bem-vindo!</h1>
+                <button id="play">INICIAR JORNADA</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="background">
+        <img class="task" id="task1" src="assets/Images/task.png" alt="task icon">
+        <img class="task" id="task2" src="assets/Images/task.png" alt="task icon">
+        <img class="task" id="task3" src="assets/Images/task.png" alt="task icon">
+        <div id="player"></div>
+    </div>
+
+    <div id="zoom-container">
+        <div id="game">
+        </div>
+    </div>
+
+    <div class="task-modal" id="modal-task1">
+        <img class="task-modal-bg" src="assets/Images/wood-modal-bg.png" alt="bg" style="width: 900px;">
+        <div class="task-modal-content">
+            <div>
+                <h2>Jogo da fogueira (cozinhar)</h2>
+                <button class="close-modal" data-modal="modal-task1" onclick="closeModal(this)">
+                    <img src="assets/Images/x-mark.png" alt="close icon" style="width: 50px;">
+                </button>
+            </div>
+            <div>
+                <img src="assets/Images/marshmallow.png" alt="ingrediente"
+                    style="width: 100px; filter: brightness(0) saturate(0);">
+            </div>
+            <div>
+                <img id="ponto" src="assets/SVGs/progress_bar.svg" alt="ponto de cozinhar">
+                <div id="ponteiro"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-modal" id="modal-task2">
+        <img class="task-modal-bg" src="assets/Images/wood-modal-bg.png" alt="bg" style="width: 900px;">
+        <div class="task-modal-content">
+            <div>
+                <p id="tempo-final"><strong>0:00</strong></p>
+            </div>
+            <div class="form-container">
+                <form>
+                    <div class="linha">
+                        <div class="campo">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Nome & Sobrenome" required>
+                        </div>
+                        <div class="campo">
+                            <label>Email</label>
+                            <input type="email" placeholder="xxxx@xxxx.com" required>
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div class="campo">
+                            <label>Idade</label>
+                            <input type="text" placeholder="xx" required>
+                        </div>
+                        <div class="campo">
+                            <label>Telefone</label>
+                            <input type="text" placeholder="(xx) xxxxx-xxxx" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label>Sugestões</label>
+                        <textarea rows="4" placeholder="Digite aqui..."></textarea>
+                    </div>
+
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-modal" id="modal-task3">
+        <img class="task-modal-bg" src="assets/Images/wood-modal-bg.png" alt="bg" style="width: 900px;">
+        <div class="task-modal-content">
+            <div>
+                <h2>Jogo da mochila (memória)</h2>
+                <button class="close-modal" data-modal="modal-task3" onclick="closeModal(this)">
+                    <img src="assets/Images/x-mark.png" alt="close icon" style="width: 50px;">
+                </button>
+            </div>
+            <div class="itens">
+                <div class="line">
+                    <div class="item" data-pair="canivete">
+                        <div class="front"><img src="assets/Images/canivete_suico.jpg" alt="canivete"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="item" data-pair="garrafa">
+                        <div class="front"><img src="assets/Images/garrafa_com_filtro.jpg" alt="garrafa"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="item" data-pair="medkit">
+                        <div class="front"><img src="assets/Images/primeiros_socorros.jpg" alt="medkit"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="item" data-pair="medkit">
+                        <div class="front"><img src="assets/Images/primeiros_socorros.jpg" alt="medkit"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="item" data-pair="canivete">
+                        <div class="front"><img src="assets/Images/canivete_suico.jpg" alt="canivete"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="item" data-pair="garrafa">
+                        <div class="front"><img src="assets/Images/garrafa_com_filtro.jpg" alt="garrafa"></div>
+                        <div class="back"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="games.js"></script>
+</body>
+
+</html>
