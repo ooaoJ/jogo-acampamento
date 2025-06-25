@@ -166,6 +166,11 @@ function mostrarFormularioFinal() {
     const modalFormulario = document.getElementById("modal-task2");
     const tempoFinal = document.getElementById("tempo-final");
 
+    modalFormulario.style.opacity = 1;
+
+    modal1.style.display = 'none';
+    modal3.style.display = 'none';
+    
     tempoFinal.innerHTML = `${timer}`;
 
     modalFormulario.style.display = "block";

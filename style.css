@@ -93,6 +93,7 @@ body {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -115,12 +116,13 @@ body {
     from {
         transform: scale(1);
     }
+
     to {
         transform: scale(1.5);
     }
 }
 
-#screen-control{
+#screen-control {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -131,23 +133,26 @@ body {
 }
 
 #background .task {
-  width: 100px;
-  position: absolute; /* Corrigido */
-  cursor: pointer;
-  z-index: 5;
+    width: 100px;
+    position: absolute;
+    /* Corrigido */
+    cursor: pointer;
+    z-index: 5;
 }
 
 #task1 {
-  top: 480px;
-  left: 450px;
+    top: 480px;
+    left: 450px;
 }
+
 #task2 {
-  top: 420px;
-  left: 1150px;
+    top: 420px;
+    left: 1150px;
 }
+
 #task3 {
-  top: 640px;
-  left: 1400px;
+    top: 640px;
+    left: 1400px;
 }
 
 #player {
@@ -161,33 +166,36 @@ body {
     transform: scale(0.8);
     background-position: -875px;
 }
+
 .player-append {
     animation: appendP 1.5s ease;
 }
 
 @keyframes appendP {
-    0%{
+    0% {
         bottom: 100px;
         opacity: 0;
     }
 
-    100%{
+    100% {
         bottom: 10px;
         opacity: 1;
     }
 }
+
 .walk {
     animation: andar 0.8s steps(6) infinite;
 }
 
 
 @keyframes andar {
-  from {
-    background-position: 0px;
-  }
-  to {
-    background-position: -1050px;
-  }
+    from {
+        background-position: 0px;
+    }
+
+    to {
+        background-position: -1050px;
+    }
 }
 
 .task-modal {
@@ -200,10 +208,12 @@ body {
     left: calc(50% - 450px);
     opacity: 0;
 }
+
 .task-modal-bg {
     z-index: 100;
     position: absolute;
 }
+
 .task-modal-content {
     width: 700px;
     height: 340px;
@@ -211,26 +221,31 @@ body {
     position: absolute;
     z-index: 102 !important;
 }
-.task-modal-content div:nth-child(1){
+
+.task-modal-content div:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.task-modal-content div:nth-child(1) button{
+
+.task-modal-content div:nth-child(1) button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     z-index: 150;
 }
-.task-modal-content div:nth-child(2){
+
+.task-modal-content div:nth-child(2) {
     display: flex;
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 80px;
 }
-.task-modal-content div:nth-child(3){
+
+.task-modal-content div:nth-child(3) {
     position: relative;
 }
+
 #ponteiro {
     position: absolute;
     top: 10px;
@@ -241,7 +256,8 @@ body {
     background-color: rgb(247, 247, 247);
     border: 2px solid rgba(128, 128, 128, 0.377);
 }
-.itens{
+
+.itens {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -249,7 +265,8 @@ body {
     height: 300px;
     margin-top: 0 !important;
 }
-.itens .line{
+
+.itens .line {
     display: flex !important;
     align-items: center !important;
     justify-content: space-around !important;
@@ -258,14 +275,16 @@ body {
     margin-bottom: 0 !important;
 
 }
+
 .itens .item {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  display: inline-block;
-  margin: 5px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
 }
-.itens .line .item{
+
+.itens .line .item {
     width: 150px;
     margin: 0;
     height: 150px;
@@ -274,7 +293,8 @@ body {
     overflow: hidden;
     position: relative;
 }
-.itens .line .item img{
+
+.itens .line .item img {
     width: 100%;
     height: 100%;
 }
@@ -312,6 +332,7 @@ body {
     transform: rotateY(0deg);
     z-index: 2;
 }
+
 .form-container {
     width: 100%;
     display: flex;
@@ -355,13 +376,16 @@ body {
     color: #000;
     margin-bottom: 5px !important;
 }
-.campo input{
+
+.campo input {
     width: 100%;
 }
-.campo textarea{
+
+.campo textarea {
     width: 100%;
     padding: 5px !important;
 }
+
 .campo input,
 .campo textarea {
     padding: 10px;
@@ -394,8 +418,14 @@ body {
     background-color: #5a341a;
 }
 
-.append-modal{
+.append-modal {
     opacity: 1 !important;
     top: calc(50% - 270px) !important;
     transition: opacity 1s ease, top 1s ease;
+}
+
+#modal-task2{
+    top: calc(50% - 270px);
+    left: calc(50% - 450px);
+    z-index: 1000 !important;
 }
